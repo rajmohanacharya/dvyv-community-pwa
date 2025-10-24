@@ -25,6 +25,7 @@ Visit: `https://rajmohanacharya.github.io/dvyv-community-pwa`
 6. Your site will be live in 2-3 minutes!
 
 ## 📁 Project Structure
+```css
 dvyv-community-pwa/
 ├── index.html          # Main HTML file
 ├── manifest.json       # PWA manifest
@@ -40,6 +41,7 @@ dvyv-community-pwa/
 │   ├── icon-192x192.png
 │   └── icon-512x512.png
 └── README.md
+```
 
 ## 🎨 Customization
 
