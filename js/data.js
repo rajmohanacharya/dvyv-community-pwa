@@ -2,8 +2,8 @@
 const POSTS_DATA = [
     {
         id: 1,
-        author: 'Priya Vishwakarma',
-        avatar: 'PV',
+        author: 'Shantanu Acharya',
+        avatar: 'SA',
         time: '2 hours ago',
         content: 'Excited to announce our upcoming workshop on traditional craftsmanship and modern entrepreneurship! Open to all DVYV members. Let\'s preserve our heritage while embracing innovation. 🎨',
         likes: 45,
@@ -13,8 +13,8 @@ const POSTS_DATA = [
     },
     {
         id: 2,
-        author: 'Rahul Acharya',
-        avatar: 'RA',
+        author: 'Maanikya Acharya',
+        avatar: 'MA',
         time: '5 hours ago',
         content: 'Thanks to DVYV\'s career guidance program, I just landed my dream job at a top tech company! Grateful for the mentorship and support from this amazing community. 🙏',
         likes: 89,
