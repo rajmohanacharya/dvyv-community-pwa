@@ -683,14 +683,17 @@ body {
 @media (min-width: 768px) {
     .container {
         padding: 2rem;
+        padding-bottom: 80px;
     }
     
+    /* Keep navigation visible on desktop */
     .bottom-nav {
-        display: none;
+        display: flex;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
     }
     
-    body {
-        padding-bottom: 0;
+    .nav-item {
+        padding: 0.75rem 2rem;
     }
 }
 
