@@ -81,16 +81,16 @@ function renderPage(page) {
             content.innerHTML = renderEvents();
             setupEventActions();
             break;
-        case 'community':
-            content.innerHTML = renderCommunity();
-            setupCommunityActions();
+        case 'forums':
+            content.innerHTML = renderForums();
+            setupForumsActions();
             break;
         case 'profile':
             content.innerHTML = renderProfile();
             setupProfileActions();
             break;
-        case 'faq':
-            content.innerHTML = renderFAQ();
+        case 'about':
+            content.innerHTML = renderAbout();
             break;
         default:
             content.innerHTML = renderSocialFeed();
@@ -339,10 +339,10 @@ function registerForEvent(eventId) {
     alert('Registration successful! You will receive a confirmation email shortly.');
 }
 
-// Community
-function renderCommunity() {
+// Forums (formerly Community)
+function renderForums() {
     return `
-        <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem;">Community Committees</h2>
+        <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem;">Community Forums</h2>
         
         <div class="committee-tabs">
             <button class="committee-tab ${currentCommittee === 'education' ? 'active' : ''}" onclick="switchCommittee('education')">Education</button>
@@ -360,13 +360,13 @@ function renderCommunity() {
     `;
 }
 
-function setupCommunityActions() {
+function setupForumsActions() {
     // Handled via onclick
 }
 
 function switchCommittee(committee) {
     currentCommittee = committee;
-    renderPage('community');
+    renderPage('forums');
 }
 
 function createCommitteePost() {
@@ -472,10 +472,10 @@ function resetPassword() {
     document.getElementById('confirmPassword').value = '';
 }
 
-// FAQ & Info
-function renderFAQ() {
+// About (formerly FAQ & Info)
+function renderAbout() {
     return `
-        <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem;">FAQ & Information</h2>
+        <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem;">About DVYV</h2>
         
         <div class="card info-card">
             <h4><a href="#mission" onclick="showInfo('mission')" style="color: var(--primary); text-decoration: none;">Mission Statement</a></h4>
@@ -502,7 +502,7 @@ function showInfo(type) {
     switch(type) {
         case 'mission':
             html = `
-                <button class="back-btn" onclick="renderPage('faq')">← Back</button>
+                <button class="back-btn" onclick="renderPage('about')">← Back</button>
                 <div class="card">
                     <div class="card-body">
                         <h2 style="color: var(--primary); margin-bottom: 1.5rem;">Our Mission</h2>
@@ -518,7 +518,7 @@ function showInfo(type) {
             break;
         case 'values':
             html = `
-                <button class="back-btn" onclick="renderPage('faq')">← Back</button>
+                <button class="back-btn" onclick="renderPage('about')">← Back</button>
                 <div class="card">
                     <div class="card-body">
                         <h2 style="color: var(--primary); margin-bottom: 1.5rem;">Core Values</h2>
@@ -548,7 +548,7 @@ function showInfo(type) {
             break;
         case 'norms':
             html = `
-                <button class="back-btn" onclick="renderPage('faq')">← Back</button>
+                <button class="back-btn" onclick="renderPage('about')">← Back</button>
                 <div class="card">
                     <div class="card-body">
                         <h2 style="color: var(--primary); margin-bottom: 1.5rem;">Team Norms</h2>
@@ -595,7 +595,7 @@ function showInfo(type) {
             break;
         case 'faq':
             html = `
-                <button class="back-btn" onclick="renderPage('faq')">← Back</button>
+                <button class="back-btn" onclick="renderPage('about')">← Back</button>
                 <div class="card">
                     <div class="card-body">
                         <h2 style="color: var(--primary); margin-bottom: 1.5rem;">Frequently Asked Questions</h2>
