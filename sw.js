@@ -1,4 +1,4 @@
-const CACHE_NAME = 'dvyv-cache-v1';
+const CACHE_NAME = 'dvyv-cache-v2';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -6,6 +6,8 @@ const urlsToCache = [
   '/js/app.js',
   '/js/components.js',
   '/js/data.js',
+  '/js/demo-app.js',
+  '/js/demo-data.js',
   '/manifest.json',
   '/icons/icon-72x72.png',
   '/icons/icon-192x192.png',
